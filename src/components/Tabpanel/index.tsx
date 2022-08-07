@@ -16,7 +16,11 @@ export function TabPanel(props: TabPanelProps) {
       id={`full-width-tabpanel-${index}`}
       aria-labelledby={`full-width-tab-${index}`}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && (
+        <Box p={3}>
+          {children}
+        </Box>
+      )}
     </div>
   );
 }

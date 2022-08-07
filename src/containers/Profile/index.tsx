@@ -7,7 +7,7 @@ import ChangePassword from 'components/ChangePassword';
 import { TabPanel } from 'components/Tabpanel';
 import { useStyles } from './styles';
 
-export default function Profile() {
+export default function FullWidthTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 

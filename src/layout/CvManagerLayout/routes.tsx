@@ -11,15 +11,15 @@ const routes: {
   label: string;
   icon: (props: IconProps) => React.ReactElement;
 }[] = [
-  {
-    path: appRoutesEnum.CV_MANAGER,
-    label: 'Danh Sách Ứng Viên',
-    icon: (props: IconProps) => <IconSidebarDashboard {...props} />,
-  },
-  {
-    path: appRoutesEnum.PROFILE,
-    label: 'Quản Lý Tài Khoản',
-    icon: (props: IconProps) => <IconSidebarInventory {...props} />,
-  },
-];
+    {
+      path: appRoutesEnum.CV_MANAGER,
+      label: 'Danh Sách Ứng Viên',
+      icon: (props: IconProps) => <IconSidebarDashboard {...props} />,
+    },
+    {
+      path: appRoutesEnum.PROFILE,
+      label: 'Quản Lý Tài Khoản',
+      icon: (props: IconProps) => <IconSidebarInventory {...props} />,
+    },
+  ];
 export default routes;

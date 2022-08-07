@@ -7,10 +7,13 @@ import {
   ListItemIcon,
   ListItemText,
   Tooltip,
+  Typography,
 } from '@material-ui/core';
 
+import IconSidebarVersion from 'assets/icon/sidebar/sidebar-version';
 import { TaskStatus } from 'types/asyncTaskState';
 import { appRoutesEnum } from '../../../enums/routes';
+import validationUtils from '../../../utils/validation';
 import routes from '../routes';
 import { styles } from './styles';
 
@@ -49,7 +52,11 @@ export default function CvManagerDrawer(props: PropsWithChildren<Props>) {
 
   const appRoutes = useMemo(() => {
     return routes.map(({ label, path, icon }) => {
-      const isActive = routeLocation.pathname.includes(path);
+      const isActive = validationUtils.setActiveRoute(
+        routeLocation.pathname,
+        path,
+        2
+      );
 
       return (
         <ListItem
